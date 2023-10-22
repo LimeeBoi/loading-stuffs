@@ -1,16 +1,16 @@
-export default function LoadingThing({ speed, delay, num }) {
+export default function LoadingThing({ speed, delay, number }) {
   let arr = [];
-  for (let i = 0; i < num; i++) 
+  for (let i = 0; i < number; i++) {
     arr.push(i);
-
+  }  
+  
   return (
-    <>      
-      {arr.map((id, j) => 
+    <div className="loading-thing-list">      
+      {arr.map((id, i) => 
         <div className="loading-thing" key={id} style={{
-          animationDelay: `${j * delay}s`,
-          animationDuration: `${1 / speed}`
+          animation: `move ${1 / speed}s cubic-bezier(1, 0, 0, 1) ${i * delay}s infinite alternate both`
         }}/>
       )}
-    </>
-  )
+    </div>
+  );
 }

@@ -2,17 +2,53 @@
   
 } */
 
+/* input {
+  background-color: lightblue;
+  border: 2px solid rgb(60, 118, 136);
+}
 
+.form-list {
+  position: absolute;
+  top: 20%;
+  left: 3%;
+}
 
+.form {
+  top: 50%;
+  color: lightblue;
+  margin: 30px;
+  padding: 20px;
+  border: 3px solid rgb(24, 24, 88);
+}
+
+.form-submit {
+  color: lightblue;
+  background-color: black;
+  margin: 30px;
+  padding: 20px;
+  border: 3px solid rgb(24, 24, 88);
+  font-weight: bolder;
+  font-size: xx-large;
+} */
+
+.loading-thing-list {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  border: 5px solid rgb(24, 24, 88);
+  height: 15px;
+  width: 200px;
+  margin: 30px;  
+  padding: 20px;
+}
 
 .loading-thing {
-  animation: move 2s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0s infinite alternate both;
+  top: 35%;
+  right: 10%;
   width: 20px;
   height: 20px;
-  border-radius: 20%;
+  border-radius: 10%;
   position: absolute;
-  top: 10%;
-  left: 10%;
   background-color: lightblue;
 }
 
@@ -21,6 +57,6 @@
     left: 10%;
   }
   to {
-    left: 90%;
+    left: 80%;
   }
 }

@@ -1,41 +1,42 @@
 import './App.css';
 import LoadingThing from './LoadingThing';
+import Form from './Form'
 import { useState } from 'react';
 
-
-
 function App() {
-  const [state, setState] = useState({
-    speed: 2,
-    delay: 2,
-    num: 5
-  });
+  const [speed, setSpeed] = useState(0);
+  const [delay, setDelay] = useState(0);
+  const [number, setNumber] = useState(0);
 
-  function handleChange(to, val) {
-    switch (to) {
+  function handleChange(inputId, val) {
+    switch (inputId) {
       case 'speed' :
-        setState({speed: val}); 
+        setSpeed(val);
         break;
       case 'delay' :
-        setState({delay: val});
+        setDelay(val);
         break;
-      case 'num' : 
-        setState({num: val}); 
+      case 'number' : 
+        setNumber(val);
         break;
       default :
         console.warn('invalid parameter');
     }
   }
-  
+
   return (
     <div className="App">
       <header className="App-header"/>
       <LoadingThing 
-        speed={state.speed}
-        delay={state.delay}
-        num={state.num}
+        speed={speed}
+        delay={delay}
+        number={number}
       />
-      
+      <Form
+        labels={['Speed', 'Delay', 'Number']}
+        inputIds={['speed', 'delay', 'number']}
+        handler={handleChange}
+      />
     </div>
   );
 }
