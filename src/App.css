@@ -57,6 +57,13 @@ input {
   background-color: lightblue;
 }
 
+.冰淇淋 {
+  position: relative;
+  width: 1245px;
+  height: 1069px;
+  color: white;
+}
+
 @keyframes move {
   from {
     left: 10%;

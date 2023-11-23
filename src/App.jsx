@@ -2,6 +2,7 @@ import './App.css';
 import LoadingThing from './LoadingThing';
 import Form from './Form'
 import { useState } from 'react';
+import 冰淇淋 from './冰淇淋';
 
 function App() {
   const [speed, setSpeed] = useState(0);
