@@ -23,13 +23,15 @@ export default function Form({ labels, inputIds, handler }) {
         }
       }}
     >
-      {labels.map((label, index) =>
-        <div key={inputIds[index]} className="form">
-          <label>{label}</label>
-          <br/>
-          <input onChange={e => {handleChange(e.target.value, index)}}/>
-        </div>
-      )}
+      {labels.map((label, index) => {
+        return (
+          <div key={inputIds[index]} className="form">
+            <label>{label}</label>
+            <br/>
+            <input onChange={e => {handleChange(e.target.value, index)}}/>
+          </div>
+        );
+      })}
       <button className="form-submit">Update</button>
     </form>
   );
